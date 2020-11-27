@@ -26,5 +26,6 @@
 	},
 	"globals": {
 		"React": "writable"
-	}
+	},
+	"import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
 }

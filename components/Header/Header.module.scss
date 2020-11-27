@@ -1,0 +1,17 @@
+@import 'styles/mixins';
+@import 'styles/variables';
+.container {
+	@include flex();
+	width: 100%;
+	font-size: $fontLarge;
+	.leftContainer {
+		flex: 1;
+		padding-left: 2rem;
+		font-weight: bold;
+	}
+	.rightContainer {
+		flex: 1;
+		@include flex($justify: flex-end, $align: center);
+		padding-right: 2rem;
+	}
+}
