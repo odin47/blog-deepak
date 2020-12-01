@@ -1,0 +1,15 @@
+@import 'styles/variables';
+.container {
+	margin: 0 0 2rem 0;
+	.title {
+		margin: 0 0 1rem 0;
+	}
+	.excerpt {
+		margin: 0 0 1rem 0;
+	}
+	.metadata {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		color: $metadataColor;
+	}
+}

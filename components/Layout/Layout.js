@@ -2,6 +2,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import styles from './Layout.module.scss';
 
 library.add(faBars);
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
 		<div className={styles.container}>
 			<Header />
 			{children}
+			<Footer />
 		</div>
 	);
 };

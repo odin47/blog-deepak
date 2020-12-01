@@ -1,8 +1,12 @@
 html,
 body {
 	font-family: 'Segoe UI Regular', sans-serif;
-}
+	h1,
+	p {
+		margin: 0;
+	}
 
-.textCenterAlign {
-	text-align: center;
+	h1 {
+		font-size: 1.7rem;
+	}
 }
