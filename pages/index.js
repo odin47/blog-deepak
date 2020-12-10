@@ -8,8 +8,10 @@ export default function Home({ allPostsData }) {
 	return (
 		<div>
 			<Layout>
-				<Intro />
-				<ArticleList list={allPostsData} />
+				<>
+					<Intro />
+					<ArticleList list={allPostsData} />
+				</>
 			</Layout>
 		</div>
 	);

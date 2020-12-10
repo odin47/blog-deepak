@@ -6,9 +6,9 @@ const ArticleList = ({ list }) => {
 	return (
 		<nav className={styles.container}>
 			<ul className={styles.containerList}>
-				{list.map((item) => {
+				{list.map((item, index) => {
 					return (
-						<li>
+						<li key={`${item.title}-${index}`}>
 							<ArticleLink {...item} />
 						</li>
 					);

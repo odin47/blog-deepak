@@ -1,7 +1,6 @@
 @import 'styles/mixins';
 @import 'styles/variables';
 .container {
-	position: absolute;
 	@include flex();
 	width: 100%;
 	font-size: $fontLarge;
