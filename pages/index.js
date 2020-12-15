@@ -4,7 +4,6 @@ import Layout from 'components/Layout';
 import { getSortedPosts } from 'lib/posts';
 
 export default function Home({ allPostsData }) {
-	console.log(allPostsData);
 	return (
 		<div>
 			<Layout>

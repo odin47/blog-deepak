@@ -16,8 +16,10 @@
     "gray-matter": "^4.0.2",
     "next": "10.0.2",
     "prop-types": "^15.7.2",
+    "raw-loader": "^4.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-markdown": "^5.0.3",
     "sass": "^1.29.0"
   },
   "devDependencies": {

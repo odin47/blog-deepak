@@ -1,3 +1,4 @@
+import Article from 'components/Article';
 import Layout from 'components/Layout';
 import { getSortedPosts } from 'lib/posts';
 
@@ -5,9 +6,9 @@ import { getSortedPosts } from 'lib/posts';
 export default function Post ({ post }) {
 	return (
 		<Layout>
-			<h1>
-				{post.title}
-			</h1>
+			<div className={'topPadding vcenter'}>
+				<Article heading={post} content={post.content}/>
+			</div>
 		</Layout>
 	)
 };
@@ -24,7 +25,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const allPostsData = getSortedPosts();
-	const post = allPostsData.find( item => item.slug === params.pid)
+	const post = allPostsData.find( item => item.slug === params.pid);
 	return {
 		props: {
 			post
