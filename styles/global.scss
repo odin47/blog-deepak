@@ -7,6 +7,10 @@ body {
 	}
 
 	h1 {
+		font-size: 2.5rem;
+	}
+
+	h2 {
 		font-size: 1.7rem;
 	}
 
@@ -16,5 +20,9 @@ body {
 
 	.vcenter {
 		text-align: center;
+	}
+
+	.pagePadding {
+		padding: 0 0.8rem;
 	}
 }

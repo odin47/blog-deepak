@@ -20,7 +20,7 @@ It is an asynchronous way to observe an interaction between child element and pa
 
 Consider a web page which has infinite number of images. Downloading all the images on the page load is a terrible idea. One way is to load certain number of images on the page load and the rest can be downloaded when the user scrolls through the page, which can be achieved using onScroll event. onScroll event will be fired each time the user scrolls and it is run on the main thread which results in frustrating user experience.
 
-IntersectionObserver API lets user monitor a target element whenever it enters or exits parent element. Using this API developers can optimize their website because it doesn't run on the main thread like onScroll event does.  
+IntersectionObserver API lets user monitor a target element whenever it enters or exits parent element. Using this API developers can optimize their website because it doesn't run on the main thread like onScroll event does.
 
 ### How to create IntersectionObserver?
 
@@ -36,7 +36,6 @@ let options = {
 let observer = new IntersectionObserver(callback, options);
 
 ```
-
 
 options is the configuration object that is needed to be passed to IntersectionObserver constructor. The callback function will be fired when the threshold of the target element is satisfied.
 
@@ -223,5 +222,5 @@ export default App;
 ```
 
 ### Result
+See [Codesandbox](https://codesandbox.io/s/determined-https-d4hyk?file=/src/App.js)
 
-{% codesandbox d4hyk %}

@@ -7,10 +7,10 @@ export default function Home({ allPostsData }) {
 	return (
 		<div>
 			<Layout>
-				<>
+				<div className={'pagePadding'}>
 					<Intro />
 					<ArticleList list={allPostsData} />
-				</>
+				</div>
 			</Layout>
 		</div>
 	);

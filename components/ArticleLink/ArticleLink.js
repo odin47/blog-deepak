@@ -9,7 +9,7 @@ const ArticleLink = ({ date, excerpt, isLink, readTime, slug, title }) => {
 			{
 				isLink ? 
 				<Link href={`/post/${slug}`}>
-				<h1 className={styles.title}>{title}</h1>
+					<h2 className={styles.title}>{title}</h2>
 				</Link>
 				:
 				<h1 className={styles.title}>{title}</h1>
