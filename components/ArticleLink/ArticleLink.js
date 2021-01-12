@@ -1,9 +1,10 @@
-import ArticleList from 'components/ArticleList/ArticleList';
 import Link from 'next/link';
 import PropTypes from 'prop-types';
+import Tag from 'components/Tag';
 import styles from './ArticleLink.module.scss';
 
-const ArticleLink = ({ date, excerpt, isLink, readTime, slug, title }) => {
+const ArticleLink = ({ date, excerpt, isLink, readTime, slug, tags, title }) => {
+	console.log(tags);
 	return (
 		<div className={styles.container}>
 			{
@@ -16,8 +17,8 @@ const ArticleLink = ({ date, excerpt, isLink, readTime, slug, title }) => {
 			}
 			<p className={styles.excerpt}>{excerpt}</p>
 			<div className={styles.metadata}>
+				<div><Tag tagName={tags[0]}/></div>
 				<div>👓 {readTime} min read</div>
-				<div>{date}</div>
 			</div>
 		</div>
 	);

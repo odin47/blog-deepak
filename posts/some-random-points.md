@@ -3,6 +3,7 @@ title: 'How to Optimize your site using Intersection Observer API'
 date: '2020-10-09'
 author: 'Jashn Maloo'
 excerpt: "World is random in what it does, so let's write something random"
+tags: ['performance', 'coding']
 readTime: 2
 ---
 

@@ -3,6 +3,7 @@ title: 'Getting started with MDX'
 date: '2020-10-10'
 author: 'MDX Team'
 excerpt: 'Making this in MDX for simplicity and flexibility'
+tags: ['coding', 'performance']
 readTime: 3
 ---
 
