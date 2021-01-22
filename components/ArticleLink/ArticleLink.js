@@ -4,7 +4,6 @@ import Tag from 'components/Tag';
 import styles from './ArticleLink.module.scss';
 
 const ArticleLink = ({ date, excerpt, isLink, readTime, slug, tags, title }) => {
-	console.log(tags);
 	return (
 		<div className={styles.container}>
 			{
