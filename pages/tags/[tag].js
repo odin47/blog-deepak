@@ -1,11 +1,14 @@
 import Layout from 'components/Layout';
-import { getTagsList } from 'lib/posts';
+import ArticleCover from 'components/ArticleCover';
+import ArticleList from 'components/ArticleList';
+import { getSortedPosts, getTagsList } from 'lib/posts';
 
-export default function Tag ({params}) {
+export default function Tag ({params, posts}) {
 	return (
 		<Layout>
 			<div>
-				{params.tag}
+				<ArticleCover type={params.tag} />
+				<ArticleList list={posts} />
 			</div>
 		</Layout>
 	)
@@ -23,9 +26,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	//TODO - get all the posts with a specific tag
+	const posts = getSortedPosts(params.tag);
+	console.log(posts);
 	return {
 		props: {
-			params
+			params,
+			posts
 		},
 	};
 }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
-import colors from './colorScheme';
+import colors from 'styles/colorScheme';
 import styles from './Tag.module.scss';
 
 const Tag = ({tagName}) => {
