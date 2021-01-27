@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.container {
+	position: absolute;
+	top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+	background: $whiteColor;
+	animation: sliding 0.3s ease-out;
+	z-index: 9999;
+	
+	ul {
+		@include flex($direction: column, $align: center);
+		height: 50%;
+
+		li {
+			flex: 1;
+			width: 100%;
+			display: grid;
+			place-items: center;
+		}
+
+	}
+}
+
+@keyframes sliding {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
