@@ -7,8 +7,8 @@ export default function Avatar() {
 				className={styles.avatarContainer}
 				src="/images/avatar.JPG"
 				alt="Avatar"
-				width={500}
-				height={500}
+				width={200}
+				height={200}
 			/>
 		</div>
 	);
