@@ -1,5 +1,10 @@
 @import './variables';
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
 html,
 body {
 	font-family: 'Segoe UI Regular', sans-serif;
@@ -35,8 +40,9 @@ body {
 		text-align: center;
 	}
 
-	.pagePadding {
-		padding: 0 0.8rem;
+	.mainContainer {
+		width: $mainWidth;
+		margin: 0 auto;
 	}
 
 	.center {
