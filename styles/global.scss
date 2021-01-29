@@ -40,8 +40,9 @@ body {
 		text-align: center;
 	}
 
-	.pagePadding {
-		padding: 0 0.8rem;
+	.mainContainer {
+		width: $mainWidth;
+		margin: 0 auto;
 	}
 
 	.center {

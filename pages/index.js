@@ -7,7 +7,7 @@ export default function Home({ allPostsData }) {
 	return (
 		<div>
 			<Layout>
-				<div className={'pagePadding'}>
+				<div className={'mainContainer'}>
 					<Intro />
 					<ArticleList list={allPostsData} />
 				</div>
