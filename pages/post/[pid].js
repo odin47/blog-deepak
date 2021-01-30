@@ -6,7 +6,7 @@ import { getSortedPosts } from 'lib/posts';
 export default function Post ({ post }) {
 	return (
 		<Layout>
-			<div className={'topPadding pagePadding'}>
+			<div className={'mainContainer topPadding pagePadding'}>
 				<Article heading={post} content={post.content}/>
 			</div>
 		</Layout>

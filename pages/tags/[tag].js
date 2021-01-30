@@ -6,7 +6,7 @@ import { getSortedPosts, getTagsList } from 'lib/posts';
 export default function Tag ({params, posts}) {
 	return (
 		<Layout>
-			<div>
+			<div className={'mainContainer'}>
 				<ArticleCover type={params.tag} />
 				<ArticleList list={posts} />
 			</div>

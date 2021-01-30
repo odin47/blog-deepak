@@ -2,37 +2,42 @@
 @import 'styles/variables';
 
 .container {
-	height: 100vh;
 	padding-top: 3rem;
 	max-width: 60em;
 	@include flex($direction: column, $align: center);
 	.childContainer {
 		padding: 2rem 0 0 0;
-		.avatar {
-			@media screen and (min-width: 768px) {
-				margin: 2em 2em 2em 0;
-			}
-		}
 		.intro {
 			.greetings {
 				margin: 1rem 0;
 				font-size: 1.3rem;
 				font-weight: bold;
 				text-align: center;
-				@media screen and (min-width: 768px) {
-					font-size: 2rem;
-					text-align: left;
-				}
 			}
 			.shortIntro {
 				text-align: center;
-				@media screen and (min-width: 768px) {
+				margin: 2rem 0;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $bp_tablet)  {
+	.container {
+		.childContainer {
+			.avatar {
+				margin: 2em 2em 2em 0;
+			}
+			.intro {
+				.greetings {
+					font-size: 2rem;
+					text-align: left;
+				}
+				.shortIntro {
 					font-size: 1.1rem;
 					text-align: left;
 				}
 			}
-		}
-		@media screen and (min-width: 768px) {
 			display: grid;
 			grid-template-columns: 1fr 2fr;
 		}

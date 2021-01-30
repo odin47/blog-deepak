@@ -3,6 +3,7 @@
 .container {
 	@include flex();
 	width: 100%;
+	padding: 1rem;
 	font-size: $fontLarge;
 	.leftContainer {
 		flex: 1;
