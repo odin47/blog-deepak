@@ -50,3 +50,12 @@ body {
 		place-items: center;
 	}
 }
+
+@media screen and (min-width: $bp_desktop) {
+	html,
+	body {
+		.mainContainer {
+			width: $desptop_max_width;
+		}
+	}
+}
