@@ -9,11 +9,11 @@ readTime: 2
 
 Performance of the website was one of the areas I wanted to concentrate during this pandemic as I had ample amount of time working from home. Optimizing the loading of images was one of the task in my Todo list. As any sane person would do, I started Googling and the best way to do it was by using **IntersectionObserver.**  Let us learn step-by-step on how to use **IntersectionObserver API.**
 
-### What is IntersectionObserver?
+## What is IntersectionObserver?
 
 It is an asynchronous way to observe an interaction between child element and parent element.
 
-### Usecases of IntersectionObserver
+## Usecases of IntersectionObserver
 
 - Infinite scrolling of the website where the content is loaded as and when you scroll.
 - Lazy-loading of images.
@@ -23,7 +23,7 @@ Consider a web page which has infinite number of images. Downloading all the ima
 
 IntersectionObserver API lets user monitor a target element whenever it enters or exits parent element. Using this API developers can optimize their website because it doesn't run on the main thread like onScroll event does.
 
-### How to create IntersectionObserver?
+## How to create IntersectionObserver?
 
 IntersectionObserver needs configuration which helps to detect the interaction between two elements.
 
@@ -44,7 +44,7 @@ options is the configuration object that is needed to be passed to IntersectionO
 - rootMargin specifies the parent elements margin. Similar to css margins.
 - Here threshold 1.0 means 100% of the target element should be inside #scrollArea.
 
-### How to target an element to be observed?
+## How to target an element to be observed?
 
 
 
@@ -73,7 +73,7 @@ let callback = (entries, observer) => {
 
 The property of isInteracting can be checked to see if the target element is currently interacting with the root.
 
-### Lets learn using a simple example using ReatJS.
+## Lets learn using a simple example using ReatJS.
 
 Let us create a simple infinite sctolling images in ReactJS s to demonstrate IntersectionObserver API.
 
@@ -222,6 +222,6 @@ export default App;
 
 ```
 
-### Result
+## Result
 See [Codesandbox](https://codesandbox.io/s/determined-https-d4hyk?file=/src/App.js)
 

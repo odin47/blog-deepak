@@ -11,5 +11,12 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		color: $metadataColor;
+		gap: 1rem;
+
+		.date {
+			font-style: italic;
+			font-weight: bold;
+			color: $blackColor;
+		}
 	}
 }

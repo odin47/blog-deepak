@@ -8,6 +8,7 @@
 html,
 body {
 	font-family: 'Segoe UI Regular', sans-serif;
+	line-height: 1.6;
 	h1,
 	p {
 		margin: 0;
@@ -48,6 +49,15 @@ body {
 	.center {
 		display: grid;
 		place-items: center;
+	}
+}
+
+@media screen and (min-width: $bp_tablet) {
+	html,
+	body {
+		.mainContainer {
+			width: $tablet_max_width;
+		}
 	}
 }
 
