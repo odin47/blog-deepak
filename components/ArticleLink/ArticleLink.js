@@ -16,8 +16,20 @@ const ArticleLink = ({ date, excerpt, isLink, readTime, slug, tags, title }) => 
 			}
 			<p className={styles.excerpt}>{excerpt}</p>
 			<div className={styles.metadata}>
-				<div><Tag tagName={tags[0]}/></div>
+				<div>
+					{
+						isLink ? 
+							<Tag tagName={tags[0]}/>
+						:
+							tags.map( tag => (
+								<Tag tagName={tag}/>
+							))
+					}
+				</div>
 				<div>👓 {readTime} min read</div>
+				{
+					!isLink && <div className={styles.date}>{date}</div>
+				}
 			</div>
 		</div>
 	);
