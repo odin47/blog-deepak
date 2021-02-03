@@ -17,7 +17,7 @@ export default function Header() {
 				<span>Blog</span>
 			</div>
 			<div className={styles.rightContainer}>
-				<FontAwesomeIcon icon="bars" onClick={() => handleSideBar(true)}/>
+				<FontAwesomeIcon className={styles.menuIcon} icon="bars" onClick={() => handleSideBar(true)}/>
 				<SideNav isOpen={state} handleClose={handleSideBar}/>
 			</div>
 		</header>
