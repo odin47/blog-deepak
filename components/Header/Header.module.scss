@@ -6,14 +6,13 @@
 	padding: 1rem;
 	font-size: $fontLarge;
 	.leftContainer {
-		flex: 1;
+		flex: 2;
 		padding-left: 2rem;
 		font-weight: bold;
 	}
 	.rightContainer {
 		flex: 1;
 		@include flex($justify: flex-end, $align: center);
-		padding-right: 2rem;
 	}
 }
 
