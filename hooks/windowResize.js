@@ -1,11 +1,11 @@
-import {useLayoutEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 
-const useInnerWidth = () => {
+const windowResize = () => {
     const [state, setState] = useState({
         width: 0,
         height: 0
     });
-    useLayoutEffect(() => {
+    useEffect(() => {
         const handleResize = () => {
             setState({
                 width: window.innerWidth,
@@ -23,4 +23,4 @@ const useInnerWidth = () => {
     return state;
 }
 
-export default useInnerWidth;
+export default windowResize;

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import useInnerWidth from 'hooks/useInnerWidth';
+import windowResize from 'hooks/windowResize';
 import styles from './SideNav.module.scss';
 
 const SideNav = ({isOpen, handleClose}) => {
 
 	const [state, setState] = useState(false);
-	const windowSize = useInnerWidth();
+	const windowSize = windowResize();
 	useEffect(() => {
 		if(windowSize.width >= 768) {
 			setState(true);
