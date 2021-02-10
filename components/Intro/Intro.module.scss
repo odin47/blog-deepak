@@ -2,7 +2,6 @@
 @import 'styles/variables';
 
 .container {
-	padding-top: 3rem;
 	max-width: 60em;
 	@include flex($direction: column, $align: center);
 	.childContainer {
