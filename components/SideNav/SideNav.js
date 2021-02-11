@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +11,8 @@ const SideNav = ({isOpen, handleClose}) => {
 
 	const [state, setState] = useState(false);
 	const windowSize = windowResize();
+	const router = useRouter();
+
 	useEffect(() => {
 		if(windowSize.width >= 768) {
 			setState(true);
@@ -38,10 +41,10 @@ const SideNav = ({isOpen, handleClose}) => {
 			state &&
 				<div className={styles.normalContainer}>
 					<ul>
-						<li><Link href={'/'}>Home</Link></li>
-						<li><Link href={'/blog'}>Blog</Link></li>
-						<li><Link href={'/coffee'}>Coffee</Link></li>
-						<li><Link href={'/about'}>About</Link></li>
+						<li className={router.pathname === '/' ? 'textUnderline' : ''}><Link href={'/'}>Home</Link></li>
+						<li className={router.pathname === '/blog' ? 'textUnderline' : ''}><Link href={'/blog'}>Blog</Link></li>
+						<li className={router.pathname === '/coffee' ? 'textUnderline' : ''}><Link href={'/coffee'}>Coffee</Link></li>
+						<li className={router.pathname === '/about' ? 'textUnderline' : ''}><Link href={'/about'}>About</Link></li>
 					</ul>
 				</div>
 		}

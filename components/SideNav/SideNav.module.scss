@@ -33,6 +33,11 @@
 		@include flex();
 		li {
 			flex: 1;
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: $secondaryColor;
+				text-decoration-thickness: 5px;
+			}
 		}
 	}
 }
