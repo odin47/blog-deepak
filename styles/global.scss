@@ -5,6 +5,8 @@
 	padding: 0;
 	margin: 0;
 	font-size: clamp(16px, 1vw, 24px);
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 html,
 body {
@@ -55,6 +57,12 @@ body {
 	.center {
 		display: grid;
 		place-items: center;
+	}
+
+	.textUnderline {
+		text-decoration: underline;
+		text-decoration-color: $secondaryColor;
+		text-decoration-thickness: 5px;
 	}
 }
 
