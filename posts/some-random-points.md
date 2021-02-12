@@ -1,4 +1,5 @@
 ---
+cover: 'some-random-points.svg'
 title: 'How to Optimize your site using Intersection Observer API'
 date: '2020-10-09'
 author: 'Jashn Maloo'

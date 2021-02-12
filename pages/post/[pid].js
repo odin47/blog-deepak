@@ -1,4 +1,5 @@
 import Article from 'components/Article';
+import ArticleCover from 'components/ArticleCover';
 import Layout from 'components/Layout';
 import { getSortedPosts } from 'lib/posts';
 
@@ -7,7 +8,10 @@ export default function Post ({ post }) {
 	return (
 		<Layout>
 			<div className={'mainContainer topPadding pagePadding'}>
-				<Article heading={post} content={post.content}/>
+				{
+					post && post.cover && <ArticleCover path={post.cover} />
+				}
+				<Article heading={post} content={post.content} />
 			</div>
 		</Layout>
 	)
