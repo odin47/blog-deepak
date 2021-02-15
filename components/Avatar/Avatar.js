@@ -5,7 +5,7 @@ export default function Avatar() {
 		<div className={styles.container}>
 			<Image
 				className={styles.avatarContainer}
-				src="/images/avatar.JPG"
+				src="/images/avatar.svg"
 				alt="Avatar"
 				width={200}
 				height={200}
