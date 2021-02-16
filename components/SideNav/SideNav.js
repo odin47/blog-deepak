@@ -43,7 +43,7 @@ const SideNav = ({isOpen, handleClose}) => {
 					<ul>
 						<li className={router.pathname === '/' ? 'textUnderline' : ''}><Link href={'/'}>Home</Link></li>
 						<li className={router.pathname === '/blog' ? 'textUnderline' : ''}><Link href={'/blog'}>Blog</Link></li>
-						<li className={router.pathname === '/coffee' ? 'textUnderline' : ''}><Link href={'/coffee'}>Coffee</Link></li>
+						<li className={router.pathname === '/resume.pdf' ? 'textUnderline' : ''}><Link href={'/resume.pdf'}>CV</Link></li>
 						<li className={router.pathname === '/about' ? 'textUnderline' : ''}><Link href={'/about'}>About</Link></li>
 					</ul>
 				</div>
