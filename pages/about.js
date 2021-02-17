@@ -1,9 +1,13 @@
+import Head from 'next/head';
 import Layout from 'components/Layout';
 import Avatar from 'components/Avatar';
 
 const About = () => {
     return (
         <Layout>
+            <Head>
+				<title>About page</title>
+			</Head>
             <div className={'mainContainer'}>
                 <div className={'vcenter'}>
                     <h1>I am Deepak Podili Devendra</h1>

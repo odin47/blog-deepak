@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Article from 'components/Article';
 import ArticleCover from 'components/ArticleCover';
 import Layout from 'components/Layout';
@@ -7,6 +8,9 @@ import { getSortedPosts } from 'lib/posts';
 export default function Post ({ post }) {
 	return (
 		<Layout>
+			<Head>
+				<title>{post.title}</title>
+			</Head>
 			<div className={'mainContainer topPadding pagePadding'}>
 				{
 					post && post.cover && <ArticleCover path={post.cover} />

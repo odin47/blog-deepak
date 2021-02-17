@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from 'components/Layout';
 import ArticleCover from 'components/ArticleCover';
 import ArticleList from 'components/ArticleList';
@@ -6,6 +7,9 @@ import { getSortedPosts, getTagsList } from 'lib/posts';
 export default function Tag ({params, posts}) {
 	return (
 		<Layout>
+			<Head>
+				<title>Tags page | {params.tag}</title>
+			</Head>
 			<div className={'mainContainer'}>
 				<ArticleCover type={params.tag} />
 				<ArticleList list={posts} />
