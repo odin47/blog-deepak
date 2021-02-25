@@ -9,6 +9,10 @@
 		flex: 2;
 		padding-left: 2rem;
 		font-weight: bold;
+
+		.blogName {
+			font-family: 'Cassandra', sans-serif;
+		}
 	}
 	.rightContainer {
 		flex: 1;

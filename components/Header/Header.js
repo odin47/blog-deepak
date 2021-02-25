@@ -14,7 +14,7 @@ export default function Header() {
 		<header className={styles.container}>
 			<div className={styles.leftContainer}>
 				<span>💾</span>
-				<span>Blog</span>
+				<span className={styles.blogName}>Blog</span>
 			</div>
 			<div className={styles.rightContainer}>
 				<FontAwesomeIcon className={styles.menuIcon} icon="bars" onClick={() => handleSideBar(true)}/>

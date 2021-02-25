@@ -29,3 +29,11 @@
 	src: local('Segoe UI Bold Italic'),
 		url('./segoi_ui/Segoe\ UI\ Bold\ Italic.woff') format('woff');
 }
+
+@font-face {
+	font-family: "Cassandra";
+	src: url("./cassandra-font/CassandraPersonalUseRegular-3BjG.ttf");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
