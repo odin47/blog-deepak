@@ -29,9 +29,7 @@ export async function getStaticPaths() {
 };
 
 export async function getStaticProps({ params }) {
-	//TODO - get all the posts with a specific tag
 	const posts = getSortedPosts(params.tag);
-	console.log(posts);
 	return {
 		props: {
 			params,
