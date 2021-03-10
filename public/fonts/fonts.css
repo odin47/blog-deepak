@@ -32,8 +32,8 @@
 
 @font-face {
 	font-family: "Cassandra";
-	src: url("./cassandra-font/CassandraPersonalUseRegular-3BjG.ttf");
 	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
+	font-weight: normal;
+	src: local('Cassandra UI Bold'),
+		url("./cassandra-font/CassandraPersonalUseRegular-3BjG.ttf") format('ttf');
 }

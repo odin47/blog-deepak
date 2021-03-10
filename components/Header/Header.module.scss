@@ -1,5 +1,7 @@
 @import 'styles/mixins';
 @import 'styles/variables';
+@import '/fonts/fonts.css';
+
 .container {
 	@include flex();
 	width: 100%;
@@ -10,8 +12,13 @@
 		padding-left: 2rem;
 		font-weight: bold;
 
+		.blogIcon {
+			font-size: clamp(16px, 2vw, 36px);
+		}
+
 		.blogName {
 			font-family: 'Cassandra', sans-serif;
+			cursor: pointer;
 		}
 	}
 	.rightContainer {
