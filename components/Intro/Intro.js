@@ -1,4 +1,6 @@
 import Avatar from 'components/Avatar';
+import Button from 'components/Button';
+import Input from 'components/Input';
 import styles from './Intro.module.scss';
 
 export default function Intro() {
@@ -19,6 +21,10 @@ export default function Intro() {
 					</p>
 				</div>
 			</div>
+				<div className={'flexRow'}>
+					<Input />
+					<Button>Subscribe</Button>
+				</div>
 		</div>
 	);
 }
