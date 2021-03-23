@@ -21,8 +21,8 @@ const Subscribe = () => {
     };
 
     return (
-        <div className={'mainContainer'}>
-            <Input value={state} handleChange={handleEmailChange} type='email'/>
+        <div className={'flexCenter'}>
+            <Input value={state} handleChange={handleEmailChange} type='email' placeholder='Enter your email'/>
             <Button handleAction={handleEmailAction}>Subscribe</Button>
         </div>
     )
