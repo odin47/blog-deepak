@@ -68,6 +68,10 @@ body {
 		@include flex($direction: column)
 	}
 
+	.flexCenter {
+		@include flex($justify: center, $align: center)
+	}
+
 	.textUnderline {
 		text-decoration: underline;
 		text-decoration-color: $secondaryColor;

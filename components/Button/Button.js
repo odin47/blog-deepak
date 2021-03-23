@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-
+import styles from './Button.module.scss';
 
 const Button = ({children, handleAction}) => {
-    return <button onClick={handleAction}>{children}</button>
+    return <button className={styles.buttonContainer} onClick={handleAction}>{children}</button>
 }
 
 Button.propTypes = {
