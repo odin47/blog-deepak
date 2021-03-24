@@ -14,6 +14,7 @@ const Layout = ({ children }) => {
 			<div className={styles.childContainer}>
 				{children}
 			</div>
+			<div id="root-portal" />
 			<Footer />
 		</div>
 	);
