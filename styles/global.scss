@@ -72,6 +72,10 @@ body {
 		@include flex($justify: center, $align: center)
 	}
 
+	.height-100-vh {
+		height: 100vh;
+	}
+
 	.textUnderline {
 		text-decoration: underline;
 		text-decoration-color: $secondaryColor;
