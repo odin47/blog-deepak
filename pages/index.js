@@ -3,6 +3,7 @@ import ArticleList from 'components/ArticleList';
 import Intro from 'components/Intro';
 import Layout from 'components/Layout';
 import { getSortedPosts } from 'lib/posts';
+import { getArticles } from 'adapters/posts';
 
 export default function Home({ allPostsData }) {
 	return (
@@ -20,6 +21,7 @@ export default function Home({ allPostsData }) {
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPosts();
+	// getArticles().then(res => console.log(res));
 	return {
 		props: {
 			allPostsData,

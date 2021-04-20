@@ -1,11 +1,13 @@
 import axios from 'axios';
 const SERVER_DOMAIN = process.env.SERVER_DOMAIN;
 
+console.log(SERVER_DOMAIN);
 const getHeaders = () => {
     return {
         headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'api-key': '7T83pgbYtNUGaPtcg6UMsWkZ'
         },
     };
 };
