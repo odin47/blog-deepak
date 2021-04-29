@@ -3,6 +3,7 @@ import Article from 'components/Article';
 import ArticleCover from 'components/ArticleCover';
 import Layout from 'components/Layout';
 import { getSortedPosts } from 'lib/posts';
+import { getArticles, getArticleBySlug } from 'adapters/posts';
 
 
 export default function Post ({ post }) {
@@ -22,8 +23,7 @@ export default function Post ({ post }) {
 };
 
 export async function getStaticPaths() {
-	const allPostsData = getSortedPosts();
-
+	const allPostsData = await getArticles();
 	const paths = allPostsData.map( post => ({
 		params: {pid: post.slug}
 	}));
@@ -32,8 +32,7 @@ export async function getStaticPaths() {
 };
 
 export async function getStaticProps({ params }) {
-	const allPostsData = getSortedPosts();
-	const post = allPostsData.find( item => item.slug === params.pid);
+	const post = await getArticleBySlug(params.pid);
 	return {
 		props: {
 			post

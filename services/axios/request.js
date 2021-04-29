@@ -1,20 +1,23 @@
 import axios from 'axios';
+
 const SERVER_DOMAIN = process.env.SERVER_DOMAIN;
 
-console.log(SERVER_DOMAIN);
+const handleError = (err) => {
+    console.log(`handle ERRORRRRRRRRRRRRRR`,err);
+}
+
 const getHeaders = () => {
     return {
         headers: {
-            'Accept': 'application/json',
             'Content-Type': 'application/json',
-            'api-key': '7T83pgbYtNUGaPtcg6UMsWkZ'
+            authorization: `Bearer ${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`
         },
     };
 };
 // HTTP GET Request - Returns Resolved or Rejected Promise
 export const get = (path) => {
     return new Promise((resolve, reject) => {
-        axios.get(`${SERVER_DOMAIN}${path}`, getHeaders())
+        axios.get(`${path}`, getHeaders())
         .then(response => { resolve(response) })
         .catch(error => { reject(handleError(error)) });
     });
@@ -32,7 +35,7 @@ export const post = (path, data) => {
     return new Promise((resolve, reject) => {
         axios.post(`${path}`, data, getHeaders())
         .then(response => { resolve(response) })
-        .catch(error => { reject(error) });
+        .catch(error => { reject(handleError(error)) });
     });
 };
 // HTTP DELETE Request - Returns Resolved or Rejected Promise

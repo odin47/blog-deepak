@@ -1,11 +1,52 @@
-import {get} from 'services/axios/request';
+import {post} from 'services/axios/request';
 
-const ARTICLES_URL = "https://dev.to/api/articles/me/published";
+const ARTICLES_URL = `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`;
 
 const ArticleService = {
-    getPublishedArticles: () => {
-        return get(ARTICLES_URL).then(res => res)
-    }
+	getPublishedArticles: () => {
+		const body = {
+			query: `
+				{
+					articleCollection(limit: 100) {
+						items {
+							title
+							excerpt
+							tags
+							readTime,
+							slug,
+							date
+						}
+					}
+				}
+			`
+		}
+		return post(ARTICLES_URL, body).then(res => res)
+	},
+
+	getPublishedArticleBySlug: (slug) => {
+		const body = {
+			query:`
+				query ($slug: String!) {
+					articleCollection(where:{
+						slug: $slug
+					}) {
+						items {
+						title
+						date
+						excerpt
+						readTime
+						content
+						slug
+						tags
+						}
+					}
+				}
+			`,
+			variables: {slug: slug}
+		}
+		return post(ARTICLES_URL, body).then(res => res)
+	}
+
 }
 
 export default ArticleService;
