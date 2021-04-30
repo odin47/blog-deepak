@@ -2,6 +2,7 @@ const Service = require('./axios');
 
 export const {
     Email,
-    Posts
+    Posts,
+    User
 } = Service
 export {Service}

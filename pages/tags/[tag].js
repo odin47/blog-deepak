@@ -3,6 +3,7 @@ import Layout from 'components/Layout';
 import ArticleCover from 'components/ArticleCover';
 import ArticleList from 'components/ArticleList';
 import { getSortedPosts, getTagsList } from 'lib/posts';
+import {getArticleByTag} from 'adapters/posts';
 
 export default function Tag ({params, posts}) {
 	return (
@@ -29,7 +30,7 @@ export async function getStaticPaths() {
 };
 
 export async function getStaticProps({ params }) {
-	const posts = getSortedPosts(params.tag);
+	const posts = await getArticleByTag(params.tag);
 	return {
 		props: {
 			params,

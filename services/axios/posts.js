@@ -12,8 +12,8 @@ const ArticleService = {
 							title
 							excerpt
 							tags
-							readTime,
-							slug,
+							readTime
+							slug
 							date
 						}
 					}
@@ -43,6 +43,28 @@ const ArticleService = {
 				}
 			`,
 			variables: {slug: slug}
+		}
+		return post(ARTICLES_URL, body).then(res => res)
+	},
+
+	getPublishedArticleByTag: (tag) => {
+		const body = {
+			query:`
+				query ($tag: [String]) {
+					articleCollection(where:{
+						tags_contains_some: $tag
+					}) {
+						items {
+							title
+							excerpt
+							readTime
+							slug
+							tags
+						}
+					}
+				}
+			`,
+			variables: {tag: tag}
 		}
 		return post(ARTICLES_URL, body).then(res => res)
 	}
