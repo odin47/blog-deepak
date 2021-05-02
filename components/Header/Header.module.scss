@@ -14,11 +14,13 @@
 
 		.blogIcon {
 			font-size: clamp(16px, 2vw, 36px);
+			font-size: 2.5rem;
 		}
 
 		.blogName {
 			font-family: 'Cassandra', sans-serif;
 			cursor: pointer;
+			font-size: 2rem;
 		}
 	}
 	.rightContainer {
