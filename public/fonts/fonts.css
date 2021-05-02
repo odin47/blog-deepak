@@ -31,9 +31,9 @@
 }
 
 @font-face {
-	font-family: "Cassandra";
+	font-family: 'Cassandra';
 	font-style: normal;
 	font-weight: normal;
 	src: local('Cassandra UI Bold'),
-		url("./cassandra-font/CassandraPersonalUseRegular-3BjG.ttf") format('ttf');
+		url("./cassandra-font/CassandraPersonalUseRegular-3BjG.ttf") format('truetype');
 }
