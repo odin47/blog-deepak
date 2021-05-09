@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Article from 'components/Article';
 import ArticleCover from 'components/ArticleCover';
 import Layout from 'components/Layout';
-import { getSortedPosts } from 'lib/posts';
 import { getArticles, getArticleBySlug } from 'adapters/posts';
 
 
