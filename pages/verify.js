@@ -3,16 +3,17 @@ import {useRouter} from 'next/router';
 import Image from 'next/image';
 import Layout from 'components/Layout';
 import {verifyEmail} from 'adapters/email';
+import { getFooterInfo } from 'adapters/user';
 
 
-const Verify = () => {
+const Verify = ({footerInfo}) => {
 	const router = useRouter();
 	const [state, setState] = useState("loading");
 	useEffect(() => {
 		verifyEmail(router.query).then(res => setState(res)).catch(err => setState(res))
 	}, [router]);
 	return (
-		<Layout>
+		<Layout footerInfo={footerInfo}>
 			<div className={'height-100-vh flexCenter'}>
 				<div className={'vcenter'}>
 					{
@@ -34,6 +35,15 @@ const Verify = () => {
 			</div>
 		</Layout>
 	)
+}
+
+export async function getStaticProps() {
+	const footerInfo = await getFooterInfo();
+	return {
+		props: {
+			footerInfo
+		},
+	};
 }
 
 export default Verify;

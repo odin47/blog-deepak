@@ -1,11 +1,11 @@
 import Head from 'next/head';
 import Layout from 'components/Layout';
 import Avatar from 'components/Avatar';
-import {getAboutInfo} from 'adapters/user';
+import {getAboutInfo, getFooterInfo} from 'adapters/user';
 
-const About = ({aboutInfo:{mainIntro, detailedIntro}}) => {
+const About = ({aboutInfo:{mainIntro, detailedIntro}, footerInfo}) => {
     return (
-        <Layout>
+        <Layout footerInfo={footerInfo}>
             <Head>
 				<title>About page</title>
 			</Head>
@@ -26,9 +26,12 @@ const About = ({aboutInfo:{mainIntro, detailedIntro}}) => {
 
 export async function getStaticProps() {
 	const aboutInfo = await getAboutInfo();
-	return {
+	const footerInfo = await getFooterInfo();
+	
+    return {
 		props: {
 			aboutInfo,
+            footerInfo
 		},
 	};
 }

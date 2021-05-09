@@ -2,13 +2,12 @@ import Head from 'next/head';
 import Article from 'components/Article';
 import ArticleCover from 'components/ArticleCover';
 import Layout from 'components/Layout';
-import { getSortedPosts } from 'lib/posts';
 import { getArticles, getArticleBySlug } from 'adapters/posts';
+import { getFooterInfo } from 'adapters/user';
 
-
-export default function Post ({ post }) {
+export default function Post ({ post, footerInfo }) {
 	return (
-		<Layout>
+		<Layout footerInfo={footerInfo}>
 			<Head>
 				<title>{post.title}</title>
 			</Head>
@@ -33,9 +32,12 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const post = await getArticleBySlug(params.pid);
+	const footerInfo = await getFooterInfo();
+
 	return {
 		props: {
-			post
+			post,
+			footerInfo
 		},
 	};
 }

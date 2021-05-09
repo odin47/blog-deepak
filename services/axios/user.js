@@ -17,7 +17,28 @@ const UserService = {
 			`
 		}
 		return post(ARTICLES_URL, body).then(res => res)
+	},
+
+	getFooterPageInfo: () => {
+		const body = {
+			query: `
+				{
+					footerCollection(where: {
+					title: "footer"
+					}) {
+						items {
+						linkedin
+						github
+						dev
+						twitter
+						developerName
+					}
+				}
+			}`
+		}
+		return post(ARTICLES_URL, body).then(res => res)
 	}
+
 }
 
 export default UserService;

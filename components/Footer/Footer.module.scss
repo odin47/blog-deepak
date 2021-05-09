@@ -8,4 +8,20 @@
 	color: $whiteColor;
 	height: 6rem;
 	@include flex($justify: center, $align: center);
+	.childContainer {
+		@include flex();
+		width: 100%;
+		.leftChildContainer {
+			flex: 2;
+			text-align: right;
+		}
+		.rightChildContainer {
+			padding: 4px 0;
+			flex: 1;
+			@include flex($justify: space-around);
+			a {
+				color: $whiteColor;
+			}
+		}
+	}
 }

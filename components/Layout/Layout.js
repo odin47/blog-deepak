@@ -7,7 +7,7 @@ import styles from './Layout.module.scss';
 
 library.add(faBars);
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footerInfo }) => {
 	return (
 		<div className={styles.container}>
 			<Header />
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
 				{children}
 			</div>
 			<div id="root-portal" />
-			<Footer />
+			<Footer {...footerInfo}/>
 		</div>
 	);
 };

@@ -1,7 +1,7 @@
 import fs from 'fs';
+import * as moment from 'moment';
 import matter from 'gray-matter';
 import path from 'path';
-
 const getDirectoryPath = (directoryName) => {
 	return path.join(process.cwd(), directoryName)
 }
@@ -14,12 +14,9 @@ const getFileNameListSync = (path) => {
 	return fs.readdirSync(path)
 }
 
-const getFormattedDate = (date, locale='en-IN', options = { month: 'long', day: 'numeric', year: 'numeric' }) => {
-	const formattedDate = new Date(date).toLocaleDateString(
-		locale,
-		options
-	);
-	return formattedDate
+
+const getFormattedDate = (date, format="DD-MM-YYYY") => {
+	return moment(date).format(format)
 }
 
 const getMarkdownContent = (fileContent) => {
