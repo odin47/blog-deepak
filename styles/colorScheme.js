@@ -7,5 +7,8 @@ export default {
     // html: '#e8cf7b',
     nextjs: '#ea4646',
     docker: '#8b82e5',
-    devops: '#ddff00'
+    devops: '#ddff00',
+    networking: '#ff8b42',
+    help: '#42f9ff',
+    webdev: '#faa0b6'
 }
