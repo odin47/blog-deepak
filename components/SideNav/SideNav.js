@@ -43,7 +43,7 @@ const SideNav = ({isOpen, handleClose}) => {
 					<ul>
 						<li className={router.pathname === '/' ? 'textUnderline' : ''}><Link href={'/'}>Home</Link></li>
 						<li className={router.pathname === '/blog' ? 'textUnderline' : ''}><Link href={'/blog'}>Blog</Link></li>
-						<li className={router.pathname === '/resume.pdf' ? 'textUnderline' : ''}><Link href={'/resume.pdf'}>CV</Link></li>
+						<li className={router.pathname === '/resume.pdf' ? 'textUnderline' : ''}><Link href={'https://www.notion.so/Deepak-Podili-Devendra-2eb43bf2532e4749a72147450a7942ba#9d475b9e1463465d91d55ecbd99bb12a'}>CV</Link></li>
 						<li className={router.pathname === '/about' ? 'textUnderline' : ''}><Link href={'/about'}>About</Link></li>
 					</ul>
 				</div>
