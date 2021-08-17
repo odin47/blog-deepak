@@ -7,7 +7,7 @@ export default function Footer({developerName, twitter, linkedin, github, dev}) 
 		<footer className={styles.container}>
 			<div className={styles.childContainer}>
 				<div className={styles.leftChildContainer}>
-					<p>Designed and Developed with ❤️ by {developerName}</p>
+					<p>Designed and Developed with ❤️ by {developerName}.</p>
 				</div>
 				<div className={styles.rightChildContainer}>
 					<a href={twitter}>
